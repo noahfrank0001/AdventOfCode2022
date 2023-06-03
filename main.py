@@ -19,9 +19,6 @@ for i in splitStr:
         elves[name] = addition
         addition = []
 
-# If you uncomment this line, a dictionary with each elf and their calories will be returned.
-# print(elves)
-
 maxNum = 0
 maxElf = ""
 for x, y in elves.items():
@@ -29,5 +26,12 @@ for x, y in elves.items():
         maxElf = x
         maxNum = sum(y)
 
-print(maxElf, ":", str(maxNum))
+elvesSorted = sorted(elves.items(), key=lambda z: sum(z[1]))
 
+total = 0
+for e in list(elvesSorted)[-3:]:
+    total += sum(e[1])
+
+print(total)
+
+# Output: 206289
