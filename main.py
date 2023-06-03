@@ -20,7 +20,6 @@ for i in splitStr:
         addition = []
 
 # If you uncomment this line, a dictionary with each elf and their calories will be returned.
-# Note that the calories are currently in string form. This is because I didn't feel like going back and modifying it, lol
 # print(elves)
 
 maxNum = 0
