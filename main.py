@@ -11,7 +11,7 @@ count = 0
 
 for i in splitStr:
     if i.strip():
-        addition.append(i)
+        addition.append(int(i))
     else:
         count += 1
         num = str(count)
@@ -26,8 +26,6 @@ for i in splitStr:
 maxNum = 0
 maxElf = ""
 for x, y in elves.items():
-    for i in range(0, len(y)):
-        y[i] = int(y[i])
     if sum(y) > maxNum:
         maxElf = x
         maxNum = sum(y)
